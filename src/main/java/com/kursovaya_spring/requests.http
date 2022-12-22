@@ -1,0 +1,19 @@
+GET http://localhost:8080/exam/java/add?questionText=Enter_age&answerText=31
+###
+GET http://localhost:8080/exam/java/add?questionText=Enter_name&answerText=Dima
+###
+GET http://localhost:8080/exam/java/add?questionText=Enter_City&answerText=Krasnodar
+###
+GET http://localhost:8080/exam/java/add?questionText=Enter_country&answerText=Russia
+###
+POST http://localhost:8080/exam/java/add
+Content-Type: application/json
+
+{
+  "question": "Enter_city_born",
+  "answer":   "Moscow"
+}
+###
+GET http://localhost:8080/exam/controller/getQuestions?amount=500
+###
+GET http://localhost:8080/students/create?name=Ivan&age=21&faculty_id=1
