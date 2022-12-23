@@ -1,4 +1,4 @@
-package controllers;
+package com.kursovaya_spring.controllers;
 
 import com.kursovaya_spring.exceptions.IllegalAmountException;
 import com.kursovaya_spring.model.Question;

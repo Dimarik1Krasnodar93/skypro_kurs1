@@ -32,4 +32,20 @@ public class Faculty {
     public String getColor() {
         return color;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
+    }
 }

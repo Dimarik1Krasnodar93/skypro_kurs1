@@ -1,4 +1,4 @@
-package controllers;
+package com.kursovaya_spring.controllers;
 
 import com.kursovaya_spring.model.Faculty;
 import com.kursovaya_spring.model.Student;
@@ -28,6 +28,7 @@ public class StudentController {
     public ResponseEntity<Student> create(@RequestParam("name") String name, @RequestParam("age") int age,
                                  @RequestParam("faculty_id") Long faculty_id) {
         return ResponseEntity.ok(studentsService.create(new Student(name, age, facultyService.findById(faculty_id))));
+       // return studentsService.create(new Student(name, age, facultyService.findById(faculty_id)));
     }
 
     @GetMapping("/findByAgeBetween")

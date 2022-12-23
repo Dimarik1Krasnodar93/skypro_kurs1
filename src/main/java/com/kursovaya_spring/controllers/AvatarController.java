@@ -1,4 +1,4 @@
-package controllers;
+package com.kursovaya_spring.controllers;
 
 import com.kursovaya_spring.model.Avatar;
 import com.kursovaya_spring.services.AvatarService;

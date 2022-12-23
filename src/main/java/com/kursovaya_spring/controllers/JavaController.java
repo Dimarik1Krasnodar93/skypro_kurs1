@@ -1,4 +1,4 @@
-package controllers;
+package com.kursovaya_spring.controllers;
 
 import com.kursovaya_spring.model.Question;
 import com.kursovaya_spring.services.JavaQuestionService;
