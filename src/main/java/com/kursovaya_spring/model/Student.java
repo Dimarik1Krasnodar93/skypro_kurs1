@@ -2,7 +2,7 @@ package com.kursovaya_spring.model;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name="STUDENT")
 public class Student
 {
     @Id

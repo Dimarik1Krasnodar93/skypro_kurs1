@@ -42,5 +42,10 @@ public class AvatarController {
         avatarService.downloadFile(id, response);
     }
 
+    @GetMapping(value = "/findAll")
+    public Iterable<Avatar> findAll() {
+        return avatarService.findAll();
+    }
+
 
 }

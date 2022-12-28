@@ -27,6 +27,7 @@ public class FacultyController {
     }
 
     @GetMapping("/create")
+
     public ResponseEntity<Faculty> create(@RequestParam("name") String name, @RequestParam("color") String color) {
         return ResponseEntity.of(Optional.of(facultyService.creaate(name, color))) ;
     }

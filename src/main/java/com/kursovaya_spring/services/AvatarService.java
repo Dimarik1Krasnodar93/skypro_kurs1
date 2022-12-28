@@ -5,6 +5,7 @@ import com.kursovaya_spring.model.Student;
 import com.kursovaya_spring.repository.AvatarRepository;
 import com.kursovaya_spring.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collection;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import static java.nio.file.StandardOpenOption.CREATE_NEW;
@@ -69,6 +72,11 @@ public class AvatarService {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Iterable<Avatar> findAll() {
+        PageRequest pageRequest = PageRequest.of(0, 3);
+        return avatarRepository.findAll();
     }
 
     private Object getExtensions(String fileName) {

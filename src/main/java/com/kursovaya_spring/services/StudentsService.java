@@ -36,5 +36,16 @@ public class StudentsService {
         return studentRepository.findById(id).orElseThrow(() -> new NoSuchElementException());
     }
 
+    public int getStudentsCount() {
+        return studentRepository.getStudentsCount();
+    }
+
+    public int getAverageAge() {
+        return studentRepository.getAverageAge();
+    }
+
+    public Collection<Student> getFiveStudents() {
+        return studentRepository.getFiveStudents();
+    }
 
 }
